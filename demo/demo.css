@@ -1,0 +1,93 @@
+* { box-sizing: border-box; }
+
+html, body {
+	margin: 0;
+	height: 100%;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+}
+
+header {
+	display: flex;
+	padding: 10px;
+	background: #dadada;
+	border-bottom: 3px solid #999;
+}
+
+header h1 {
+	flex: 1;
+	margin: 0;
+	color: #999;
+	vertical-align: middle;
+}
+
+section {
+	flex: 1;
+	padding: 10px;
+}
+
+section h2 {
+	margin: 0 0 20px;
+}
+
+.console {
+	display: flex;
+	flex-direction: column;
+	background: #333;
+}
+
+.console h2 {
+	color: #fff;
+}
+
+.console .log {
+	flex: 1;
+	font-family: Courier New, Courier, monospace;
+	color: greenyellow;
+	white-space: pre;
+	overflow-y: auto;
+}
+
+.operations {
+	flex: 1;
+	padding: 10px;
+}
+
+.operations--inactive {
+	opacity: .5;
+	pointer-events: none;
+}
+
+.operation h3 {
+	display: inline-block;
+	margin-right: 20px;
+	vertical-align: middle;
+}
+
+.operation--color ul {
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	font-size: 0;
+	vertical-align: middle;
+}
+
+.operation--color li {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	background: attr(data-color);
+	border-radius: 50%;
+	border: 2px solid #000;
+	cursor: pointer;
+}
+
+.operation--color li + li {
+	margin-left: 10px;
+}
